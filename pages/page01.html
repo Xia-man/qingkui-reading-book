@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>第 1 页 - 青葵有声书</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="page-title">第 1 页</div>
+
+    <div class="player-card">
+      <div class="disc-icon" id="disc-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z" opacity="0.3"/></svg>
+      </div>
+
+      <div class="progress-wrapper">
+        <div class="progress-bar" id="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <div class="time-display">
+          <span id="time-current">0:00</span>
+          <span id="time-total">0:00</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn-play" id="btn-play" aria-label="播放">
+          <svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="footer-hint">青葵有声书</div>
+  </div>
+
+  <audio id="audio" preload="metadata" src="../audio/page01.mp3"></audio>
+  <script src="../js/player.js"></script>
+</body>
+</html>

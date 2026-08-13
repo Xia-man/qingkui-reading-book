@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>青葵有声书</title>
+  <script>
+    (function () {
+      var path = window.location.pathname.replace(/\/$/, '');
+      var match = path.match(/\/page(\d{2})$/);
+      if (match) {
+        window.location.replace('/pages/page' + match[1] + '.html');
+        return;
+      }
+      if (path === '' || path === '/') {
+        window.location.replace('/index.html');
+        return;
+      }
+      document.addEventListener('DOMContentLoaded', function () {
+        var el = document.getElementById('message');
+        if (el) el.textContent = '页面未找到，请检查二维码链接。';
+      });
+    }());
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="page-title">青葵有声书</div>
+    <div class="player-card">
+      <div class="disc-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z" opacity="0.3"/></svg>
+      </div>
+      <p id="message" style="text-align:center; color:#7c5e4a; font-size:1rem; line-height:1.6;">
+        正在跳转...
+      </p>
+    </div>
+  </div>
+</body>
+</html>
